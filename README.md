@@ -6,6 +6,10 @@ Ties chalk, boxen & ora behind a simple logging api. Wrapps around `console.log`
 - Have a spinner on terminal logs for async operations.
 - Have boxes around your logs, supported boxes https://github.com/sindresorhus/boxen/tree/main#borderstyle.
 
+## Install
+
+`npm i logoligi`
+
 ## Usage
 
 ```typescript
