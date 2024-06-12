@@ -1,5 +1,8 @@
+import chalk, {
+  BackgroundColor as BackgroundColorName,
+  Color as ColorName,
+} from "chalk";
 import ora, { Ora } from "ora";
-import chalk, { BackgroundColorName, ColorName } from "chalk";
 import boxen from "boxen";
 
 export interface LoggerConfigI {
@@ -17,10 +20,10 @@ function makeText(msg: string, config?: LoggerConfigI): string {
   if (config.color || config.bgColor) {
     let c = chalk;
     if (config.color) {
-      c = c[config.color as ColorName];
+      c.Color = config.color as typeof ColorName;
     }
     if (config.bgColor) {
-      c = c[config.bgColor as BackgroundColorName];
+      c.BackgroundColor = config.bgColor as typeof BackgroundColorName;
     }
     txt = c(txt);
   }
@@ -65,7 +68,7 @@ export default class Logger {
         oraPtr.stopAndPersist({ text: txt });
         break;
     }
-    oraPtr.stop()
+    oraPtr.stop();
   }
   static error(msg: string, config?: LoggerConfigI) {
     const conf = {
