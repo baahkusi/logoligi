@@ -1,6 +1,6 @@
 {
   "name": "logoligi",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Log stylishly in your terminal.",
   "exports": "./index.js",
   "scripts": {
