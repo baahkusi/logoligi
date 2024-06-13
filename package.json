@@ -39,9 +39,6 @@
     "chalk": "^4",
     "ora": "5.4.1"
   },
-  "files": [
-    "dist"
-  ],
   "devDependencies": {
     "@types/chai": "^4.3.5",
     "@types/mocha": "^10.0.1",
